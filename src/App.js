@@ -6,11 +6,15 @@ import CaughtPokemon from "./CaughtPokemon";
 function App(){
   return (
     <div>
-      <Logo appName="Pokedex" />
+      <Logo appName="Pokedex" handleClick={logWhenClicked}/>
       <BestPokemon abilities={["Anticipation", "Adaptability", "Run-Away"]} />
       <CaughtPokemon date={new Date().toLocaleDateString()} />
     </div>
   );
+}
+
+function logWhenClicked() {
+  console.log("it is a click message");
 }
 // const Logo = ()=>{
 //   const appName = "Leila Pokedex";
